@@ -1,0 +1,123 @@
+<html>
+<head>
+    <title>Health and Medical History</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #4caf50;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+
+  
+</head>
+<body>
+
+    <header>
+        <h1>Health and Medical History</h1>
+        <p>Provide your health and medical history information.</p>
+    </header>
+
+         <form id="medicalHistoryForm" action="process_health_history.php" method="post" style="display: none;">
+        <!-- Your health and medical history form fields here -->
+        <label for="chronicCondition">Do you have any chronic health condition?</label>
+        <textarea id="chronicCondition" name="chronicCondition" placeholder="Type here..."></textarea>
+
+        <label for="riskGroup">Please indicate all health issues that are considered within the risk group:</label>
+        <textarea id="riskGroup" name="riskGroup" placeholder="Type here..."></textarea>
+
+        <label for="currentMedication">Please list your current medication:</label>
+        <textarea id="currentMedication" name="currentMedication" placeholder="Type here..."></textarea>
+
+        <label for="allergies">Please list down your allergies:</label>
+        <textarea id="allergies" name="allergies" placeholder="Type here..."></textarea>
+
+        <label for="symptoms">Please check the symptoms that apply:</label>
+        <input type="checkbox" id="symptomFever" name="symptoms" value="Fever">
+        <label for="symptomFever">Fever</label>
+
+        <input type="checkbox" id="symptomCough" name="symptoms" value="Cough">
+        <label for="symptomCough">Cough</label>
+
+        <input type="checkbox" id="symptomShortnessOfBreath" name="symptoms" value="Shortness of Breath">
+        <label for="symptomShortnessOfBreath">Shortness of Breath</label>
+
+        <input type="checkbox" id="symptomFatigue" name="symptoms" value="Fatigue">
+        <label for="symptomFatigue">Fatigue</label>
+
+        <label for="diagnosedWithCovid">Have you been diagnosed with COVID-19?</label>
+        <select id="diagnosedWithCovid" name="diagnosedWithCovid">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+
+        <label for="covidDetails">If yes, please provide further details (date of diagnosis, hospitalization, treatment, etc.):</label>
+        <textarea id="covidDetails" name="covidDetails" placeholder="Type here..."></textarea>
+
+        <label for="declaration">I hereby declare that all the given information is accurate.</label>
+        <input type="checkbox" id="declaration" name="declaration" required>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
+
+
+</body>
+</html>
